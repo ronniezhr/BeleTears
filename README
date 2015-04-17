@@ -1,0 +1,48 @@
+Project: BeleTears
+
+Introduction:
+
+Feeling hurt by TeleBears? Fine, we've designed a new enroll/drop system
+to stop your tears! The system works like a gambling game. Every student
+has a certain amount of tokens(default to 1000) and he/she has to make a
+bid for every course. The sum  of his/her bids cannot exceed 1000. After
+everyone has  made bids for  the courses, the system  will automatically
+enroll students  for each course.  For each course, we  basically choose
+the students  who make the  highest bids(if  two students make  the same
+bid, first  come first  enrolled). However,  students can  check whether
+his/her bids ensure enrollment and drop  class or change bids as long as
+he/she logs in again.
+
+The files in this directory form a simple version of BeleTears system.
+
+
+Files:
+
+course.py:  Represents courses  in BeleTears.
+
+data: The  file to  store current data(to ensure  data  still be  saved
+        after logout or quit).
+
+error.py: Reports  errors  such  as unexisted  username, wrong password
+        and illegal  commands such as dropping unselected courses.
+
+generator.py: Generates a set of data of students and courses we make to
+        test BeleTears.
+
+main.py: Runs the whole system.
+
+student.py: Represents student accounts in BeleTears.
+
+ucb.py: Some basic decorators.
+
+
+Commands:
+        bid [course] [price]    Bid PRICE on course.
+        drop [course]           Drop COURSE, return your bid to your balance.
+        info                    Display your current bids(including whether
+                                safe to be selected) and balance.
+        list                    List all courses.
+        search [keywords...]    List courses that matches the KEYWORDS.
+        help                    Display help message.
+        logout                  Log out the current user account.
+        exit/quit/<Control>-D   Exit this system.
